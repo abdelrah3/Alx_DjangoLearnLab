@@ -1,6 +1,6 @@
 import django
 import os
-
+Author.objects.get(name=author_name)", "objects.filter(author=author)
 # Set up Django environment
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "your_project_name.settings")
 django.setup()
