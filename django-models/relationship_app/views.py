@@ -11,8 +11,10 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required, permission_required
 from .models import Book
 from .forms import BookForm
+from django.contrib.auth.decorators import permission_required
 relationship_app/list_books.html
 relationship_app/library_detail.html
+
 def list_books(request):
     books = Book.objects.all()
     return render(request, 'list_books.html', {'books': books})
