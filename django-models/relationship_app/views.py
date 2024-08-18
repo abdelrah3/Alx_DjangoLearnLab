@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Book
-
+relationship_app/list_books.html
 def list_books(request):
     books = Book.objects.all()
     return render(request, 'list_books.html', {'books': books})
