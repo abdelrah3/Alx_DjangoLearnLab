@@ -1,6 +1,13 @@
 from django.contrib.auth.decorators import permission_required
 from django.shortcuts import render, get_object_or_404
 from .models import Book
+from django.shortcuts import render
+from django.shortcuts import get_object_or_404
+
+def book_detail(request, book_id):
+    book = get_object_or_404(Book, id=book_id)
+    books = Book.objects.filter(title=user_input)
+    return render(request, 'bookshelf/book_detail.html', {'book': book})
 
 @permission_required('bookshelf.can_view', raise_exception=True)
 def book_list(request):
